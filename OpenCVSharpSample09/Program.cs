@@ -6,7 +6,7 @@ namespace OpenCVSharpSample09
     {
         static void Main(string[] args)
         {
-            using (var src = new Mat(@"..\..\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             using (var dst = new Mat())
             {
                 src.CopyTo(dst);
@@ -57,10 +57,10 @@ namespace OpenCVSharpSample09
                            window.Image = dst;
                        });
 
-                    angleTrackbar.Callback.DynamicInvoke(0);
-                    scaleTrackbar.Callback.DynamicInvoke(1);
-                    resizeTrackbar.Callback.DynamicInvoke(1);
-                    blurTrackbar.Callback.DynamicInvoke(1);
+                    //angleTrackbar.Callback.DynamicInvoke(0);
+                    //scaleTrackbar.Callback.DynamicInvoke(1);
+                    //resizeTrackbar.Callback.DynamicInvoke(1);
+                    //blurTrackbar.Callback.DynamicInvoke(1);
 
                     Cv2.WaitKey();
                 }

@@ -6,7 +6,7 @@ namespace OpenCVSharpSample08
     {
         static void Main(string[] args)
         {
-            using (var src = new Mat(@"..\..\Images\cvmorph.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\cvmorph.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             using (var dst = new Mat())
             {
                 src.CopyTo(dst);

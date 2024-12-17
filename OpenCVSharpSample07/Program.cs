@@ -45,7 +45,7 @@ namespace OpenCVSharpSample07
         private static void usingCppInterface1()
         {
             // Cv2.ImRead
-            using (var src = new Mat(@"..\..\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             using (var dst = new Mat())
             {
                 src.CopyTo(dst);
@@ -81,7 +81,7 @@ namespace OpenCVSharpSample07
         private static void usingCppInterface2()
         {
             // Cv2.ImRead
-            using (var src = new Mat(@"..\..\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             using (var dst = new Mat())
             {
                 Cv2.CvtColor(src, dst, ColorConversionCodes.BGRA2GRAY);

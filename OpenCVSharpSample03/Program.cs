@@ -11,7 +11,7 @@ namespace OpenCVSharpSample03
 
         private static void createAGrayScaleClone()
         {
-            using (var src = new Mat(@"..\..\images\ocv02.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\images\ocv02.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 using (var srcCopy = new Mat())
                 {

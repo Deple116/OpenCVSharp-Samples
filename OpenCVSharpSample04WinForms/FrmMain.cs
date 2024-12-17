@@ -21,7 +21,7 @@ namespace OpenCVSharpSample04WinForms
 
         private void showImageUsingPictureBoxIpl()
         {
-            using (var iplImage = new Mat(@"..\..\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var iplImage = new Mat(@".\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 Cv2.Dilate(iplImage, iplImage, new Mat());
 
@@ -41,7 +41,7 @@ namespace OpenCVSharpSample04WinForms
         private void showImageUsingPictureBox()
         {
             Bitmap bitmap;
-            using (var iplImage = new Mat(@"..\..\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var iplImage = new Mat(@".\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 bitmap = iplImage.ToBitmap(); // BitmapConverter.ToBitmap()
             }

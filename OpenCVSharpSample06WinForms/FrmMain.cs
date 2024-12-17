@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
@@ -132,8 +133,17 @@ namespace OpenCVSharpSample06WinForms
 
         private void workerDoReadVideo(object sender, DoWorkEventArgs e)
         {
-            using (var capture = new VideoCapture(@"..\..\Videos\drop.avi"))
+
+            using (var capture = new VideoCapture(@".\Videos\drop.avi"))
             {
+
+                if (!capture.IsOpened())
+                {
+                    //Console.WriteLine("无法打开视频文件");
+                    MessageBox.Show("无法打开视频文件");
+                    return;
+                }
+
                 var interval = (int)(1000 / capture.Fps);
 
                 using (var image = new Mat())

@@ -12,7 +12,7 @@ namespace OpenCVSharpSample02
 
         private static void readImage2()
         {
-            using (var src = new Mat(@"..\..\Images\ocv02.jpg", ImreadModes.Unchanged))
+            using (var src = new Mat(@".\Images\ocv02.jpg", ImreadModes.Unchanged))
             {
                 using (var window = new Window("window", image: src, flags: WindowMode.AutoSize))
                 {
@@ -23,7 +23,7 @@ namespace OpenCVSharpSample02
 
         private static void readImage1()
         {
-            using (var src = new Mat(@"..\..\Images\ocv02.jpg", ImreadModes.GrayScale))
+            using (var src = new Mat(@".\Images\ocv02.jpg", ImreadModes.GrayScale))
             {
                 using (var window = new Window("window", image: src, flags: WindowMode.AutoSize))
                 {

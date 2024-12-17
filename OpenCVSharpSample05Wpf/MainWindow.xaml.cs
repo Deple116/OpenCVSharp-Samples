@@ -14,7 +14,7 @@ namespace OpenCVSharpSample05Wpf
 
         private void loadImage()
         {
-            using (var iplImage = new Mat(@"..\..\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var iplImage = new Mat(@".\Images\Penguin.png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 Cv2.Dilate(iplImage, iplImage, new Mat());
 

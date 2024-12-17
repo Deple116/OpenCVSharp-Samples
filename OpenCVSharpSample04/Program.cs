@@ -13,7 +13,7 @@ namespace OpenCVSharpSample04
 
         private static void testBuiltinFilters()
         {
-            using (var src = new Mat(@"..\..\Images\Car.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\Car.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             {
                 using (var dst = new Mat())
                 {
@@ -41,7 +41,7 @@ namespace OpenCVSharpSample04
 
         private static void applyLinearFilter()
         {
-            using (var src = new Mat(@"..\..\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
+            using (var src = new Mat(@".\Images\Penguin.Png", ImreadModes.AnyDepth | ImreadModes.AnyColor))
             using (var dst = new Mat())
             {
                 src.CopyTo(dst);
