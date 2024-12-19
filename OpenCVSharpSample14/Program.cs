@@ -7,7 +7,7 @@ namespace OpenCVSharpSample14
     {
         static void Main(string[] args)
         {
-            var srcImage = new Mat(@"..\..\Images\cvlbl.png");
+            var srcImage = new Mat(@".\Images\cvlbl.png");
             Cv2.ImShow("Source", srcImage);
             Cv2.WaitKey(1); // do events
 

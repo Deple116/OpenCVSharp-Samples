@@ -16,7 +16,7 @@ namespace OpenCVSharpSample16
 
         private static void useTrainedData()
         {
-            var srcImage = new Mat(@"..\..\CarData\CarData\TestImages_Scale\test-1.pgm");
+            var srcImage = new Mat(@".\CarData\CarData\TestImages_Scale\test-1.pgm");
             Cv2.ImShow("Source", srcImage);
             Cv2.WaitKey(1); // do events
 
@@ -24,7 +24,7 @@ namespace OpenCVSharpSample16
             Cv2.CvtColor(srcImage, grayImage, ColorConversionCodes.BGRA2GRAY);
             Cv2.EqualizeHist(grayImage, grayImage);
 
-            var cascade = new CascadeClassifier(@"..\..\CarsInfo\data\cascade.xml");
+            var cascade = new CascadeClassifier(@".\CarsInfo\data\cascade.xml");
 
             var cars = cascade.DetectMultiScale(
                 image: grayImage,

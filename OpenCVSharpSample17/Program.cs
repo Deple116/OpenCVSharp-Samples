@@ -21,7 +21,7 @@ namespace OpenCVSharpSample17
             var images = new List<ImageInfo>();
 
             var imageId = 0;
-            foreach (var dir in new DirectoryInfo(@"..\..\Images").GetDirectories())
+            foreach (var dir in new DirectoryInfo(@".\Images").GetDirectories())
             {
                 var groupId = int.Parse(dir.Name.Replace("s", string.Empty)) - 1;
                 foreach (var imageFile in dir.GetFiles("*.pgm"))

@@ -7,7 +7,7 @@ namespace OpenCVSharpSample15
     {
         static void Main(string[] args)
         {
-            var srcImage = new Mat(@"..\..\Images\Test.jpg");
+            var srcImage = new Mat(@".\Images\Test.jpg");
             Cv2.ImShow("Source", srcImage);
             Cv2.WaitKey(1); // do events
 
@@ -15,8 +15,8 @@ namespace OpenCVSharpSample15
             Cv2.CvtColor(srcImage, grayImage, ColorConversionCodes.BGRA2GRAY);
             Cv2.EqualizeHist(grayImage, grayImage);
 
-            var cascade = new CascadeClassifier(@"..\..\Data\haarcascade_frontalface_alt.xml");
-            var nestedCascade = new CascadeClassifier(@"..\..\Data\haarcascade_eye_tree_eyeglasses.xml");
+            var cascade = new CascadeClassifier(@".\Data\haarcascade_frontalface_alt.xml");
+            var nestedCascade = new CascadeClassifier(@".\Data\haarcascade_eye_tree_eyeglasses.xml");
 
             var faces = cascade.DetectMultiScale(
                 image: grayImage,

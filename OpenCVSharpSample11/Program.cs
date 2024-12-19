@@ -12,7 +12,7 @@ namespace OpenCVSharpSample11
 
         private static void example02()
         {
-            var src = new Mat(@"..\..\Images\fruits.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor);
+            var src = new Mat(@".\Images\fruits.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor);
             Cv2.ImShow("Source", src);
             Cv2.WaitKey(1); // do events
 

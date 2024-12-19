@@ -16,7 +16,7 @@ namespace OpenCVSharpSample12
         /// </summary>
         private static void watershedExample()
         {
-            var src = new Mat(@"..\..\Images\corridor.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor);
+            var src = new Mat(@".\Images\corridor.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor);
             var srcCopy = new Mat();
             src.CopyTo(srcCopy);
 
